@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+p {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
