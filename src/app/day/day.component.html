@@ -1,28 +1,19 @@
+
 <div class="container">
-  <form>
-    <div class="form-group">
-       <p class="text-center title">{{title}}</p>
-      <div class="card input-group-prebend">
-        <div class="card-body">
-          <input type="text" #job class="form-control" placeholder="Bir Görev Giriniz" name="job"
-            ngModel>
-          <input type="button" class="btn btn-danger mt-2" (click)="addJob(job.value)" value="Ekle" />
-        </div>
-      </div>
-   
-      <div *ngFor="let job of jobgroupService.jobsDay" class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-sm-10">
-              {{job}} 
-            <div class="col-sm-2">
-             
-              <input type="button" (click)="removeJob(job)" class="btn btn-primary"  value="Sil" />
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-lg-">
+       <p class="text-center">{{title}}</p>
+  <form class="from-group bg-light" [formGroup]="jobDayForm" (ngSubmit)="saveJob()">
+    <p class="text-center">{{title}}</p>
+  <input class="form-control" type="text" placeholder="Görev Adı" formControlName="name">
+  <br> <br>
+  <input class="form-control" type="text" placeholder="Görev Açıklaması" formControlName="description">
+  <br> <br>
+  <input class="form-control" type="date" placeholder="Görev Açıklaması" formControlName="date">
+  <br> <br>
+  <button class="btn btn-danger">Kaydet</button>
+</form>
     </div>
-    </div>
-  </form>
+  </div>
+ 
 </div>

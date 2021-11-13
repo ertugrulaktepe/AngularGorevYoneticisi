@@ -1,31 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { JobgroupService } from '../services/jobgroup.service';
+import { FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-moon',
   templateUrl: './moon.component.html',
   styleUrls: ['./moon.component.scss'],
-  providers: [JobgroupService]
 
 })
 export class MoonComponent implements OnInit {
 
-  constructor(public jobGroupService: JobgroupService) { }
+  constructor(public jobgroupService: JobgroupService) { }
   title = "Aylık Planlarım"
-  addJob(value: string) {
-    if (value !== "") {
-      this.jobGroupService.jobsMoon.push(value)
-      console.log(this.jobGroupService.jobsMoon)  // Tarayıcı console penceresine log düşürebiliriz
+  jobMoonForm = new FormGroup({
+    name: new FormControl(""),
+    description: new FormControl(""),
+  })
+  saveJob() {
+
+    console.log(this.jobgroupService);
+    console.log(this.jobgroupService.jobsDay);
+
+    if (this.jobMoonForm.value !== "") {
+      this.jobgroupService.jobsMoon.push(this.jobMoonForm.value)
+
     } else {
-      alert('Bir Görev Giriniz ')
+      alert("Lütfen Bilgileri Eksiksiz Giriniz")
+
     }
-  }
-  removeJob(job: string) {
-    for (let i = 0; i <= this.jobGroupService.jobsMoon.length; i++) {
-      if (job == this.jobGroupService.jobsMoon[i]) {
-        this.jobGroupService.jobsMoon.splice(i, 1)
-      }
-    }
+
+
   }
   ngOnInit(): void {
   }
