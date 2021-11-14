@@ -16,6 +16,7 @@ export class MoonComponent implements OnInit {
   jobMoonForm = new FormGroup({
     name: new FormControl(""),
     description: new FormControl(""),
+    date: new FormControl(""),
   })
   saveJob() {
 

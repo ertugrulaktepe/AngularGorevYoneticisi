@@ -14,6 +14,7 @@ export class WeekComponent implements OnInit {
   jobWeekForm = new FormGroup({
     name: new FormControl(""),
     description: new FormControl(""),
+    date: new FormControl(""),
   })
   saveJob() {
 

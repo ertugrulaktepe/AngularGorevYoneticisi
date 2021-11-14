@@ -2,8 +2,30 @@ ul {
   li {
     a {
       text-decoration: none;
-      color: #222;
+      color: #ffff;
       font-weight: 600;
+    }
+  }
+}
+
+.navbar-collapse {
+  justify-content: end;
+
+  .navbar-nav {
+    margin-right: 55px;
+
+    .nav-item {
+      margin-left: 15px;
+      transition: all ease .5s;
+
+      &:hover {
+        background-color: yellowgreen;
+        border-radius: 5px;
+
+        .nav-link {
+          color: #222;
+        }
+      }
     }
   }
 }

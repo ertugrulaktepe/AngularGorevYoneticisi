@@ -1,11 +1,18 @@
 <div class="container">
+  <div class="row">
+    <div class="col-lg-">
+       <p class="text-center">{{title}}</p>
   <form class="from-group bg-light" [formGroup]="jobMoonForm" (ngSubmit)="saveJob()">
     <p class="text-center">{{title}}</p>
-  <input class="form-control" type="text" placeholder="görev giriniz" formControlName="name">
+  <input class="form-control" type="text" placeholder="Görev Adı" formControlName="name">
   <br> <br>
-  <input class="form-control" type="text" placeholder="görev açıklaması" formControlName="description">
+  <input class="form-control" type="text" placeholder="Görev Açıklaması" formControlName="description">
+  <br> <br>
+  <input class="form-control" type="date" placeholder="Görev Açıklaması" formControlName="date">
   <br> <br>
   <button class="btn btn-danger">Kaydet</button>
 </form>
+    </div>
+  </div>
+ 
 </div>
-

@@ -13,7 +13,6 @@ export class JobsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.jobGroupService.jobsDay);
   }
 
 }

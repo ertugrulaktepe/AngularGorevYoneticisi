@@ -35,6 +35,7 @@ export class DayComponent implements OnInit {
 
   }
 
+
   // addJob(value: string) {
   //   if (value !== "") {
   //     this.jobgroupService.jobsDay.push({ value })

@@ -1,4 +1,7 @@
-<div class="day-job">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="day-job">
   <div class="container" *ngFor="let job of this.jobGroupService.jobsDay">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
@@ -8,18 +11,48 @@
    <button class="btn btn-danger">Görevi Sil</button>
   </div>
 </div>
-    <p></p>
-    <p></p>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-4">
+      <div class="day-job">
+  <div class="container" *ngFor="let job of this.jobGroupService.jobsWeek">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{job.name}}</h5>
+    <p class="card-text text-dark">{{job.description}}</p>
+   <span class="text-dark">{{job.date}}</span>
+   <button class="btn btn-danger">Görevi Sil</button>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-4">
+      <div class="day-job">
+  <div class="container" *ngFor="let job of this.jobGroupService.jobsMoon">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{job.name}}</h5>
+    <p class="card-text text-dark">{{job.description}}</p>
+   <span class="text-dark">{{job.date}}</span>
+   <button class="btn btn-danger">Görevi Sil</button>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
   </div>
 </div>
 
-<div class="container"  *ngFor="let job of this.jobGroupService.jobsMoon">
+
+<!-- <div class="container"  *ngFor="let job of this.jobGroupService.jobsMoon">
     <span>Aylık</span>
   <p>{{job.name}}</p>
   <p>{{job.description}}</p>
-</div>
-<div class="container"  *ngFor="let job of this.jobGroupService.jobsWeek">
+</div> -->
+<!-- <div class="container"  *ngFor="let job of this.jobGroupService.jobsWeek">
     <span>haftalık</span>
   <p>{{job.name}}</p>
   <p>{{job.description}}</p>
-</div>
+</div> -->
