@@ -13,27 +13,26 @@ export class MoonComponent implements OnInit {
 
   constructor(public jobgroupService: JobgroupService) { }
   title = "Aylık Planlarım"
+
   jobMoonForm = new FormGroup({
     name: new FormControl(""),
     description: new FormControl(""),
     date: new FormControl(""),
   })
+
+
   saveJob() {
-
-    console.log(this.jobgroupService);
-    console.log(this.jobgroupService.jobsDay);
-
-    if (this.jobMoonForm.value !== "") {
-      this.jobgroupService.jobsMoon.push(this.jobMoonForm.value)
-
+    if (this.jobMoonForm.value.name === "" || this.jobMoonForm.value.description === "" || this.jobMoonForm.value.date === "") {
+      alert("Lütfen Bilgileri Eksiksiz Doldurun")
     } else {
-      alert("Lütfen Bilgileri Eksiksiz Giriniz")
 
+      this.jobgroupService.jobsMoon.push(this.jobMoonForm.value)
     }
 
 
   }
   ngOnInit(): void {
+
   }
 
 }

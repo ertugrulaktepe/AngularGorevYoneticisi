@@ -1,9 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+$font: 'Rajdhani',
+sans-serif;
+
+body {
+  font-weight: $font;
+}
 
 p {
   color: white;
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 2px;
+}
+
+.form-group {
+  border-radius: 5px;
+}
+
+.card-title {
+  border-bottom: 1px solid #aea8a8;
+}
+
+form {
+  padding: 4rem;
+  border-radius: 5px;
+
+}
+
+.card {
+  padding: 1rem;
+  margin-bottom: 5px;
+
+  .card-text {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .date {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      background-color: #32d46c;
+      padding: 3px;
+      border-radius: 4px;
+      color: white;
+      font-weight: 600;
+    }
+
+    button {
+      padding: 2px;
+      font-size: 14px;
+    }
+  }
+}
+
+.container {
+  h4 {
+    margin-left: 21px;
+  }
 }

@@ -9,6 +9,7 @@ import { WeekComponent } from './week/week.component';
 import { MoonComponent } from './moon/moon.component';
 import { JobsComponent } from './jobs/jobs.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,6 @@ import { JobsComponent } from './jobs/jobs.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

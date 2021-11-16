@@ -18,13 +18,13 @@ export class WeekComponent implements OnInit {
   })
   saveJob() {
 
-    if (this.jobWeekForm.value !== "") {
-      this.jobGroupService.jobsWeek.push(this.jobWeekForm.value)
-
+    if (this.jobWeekForm.value.name === "" || this.jobWeekForm.value.description === "" || this.jobWeekForm.value.date === "") {
+      alert("Lütfen Bilgileri Eksiksiz Doldurun")
     } else {
-      alert("Lütfen Bilgileri Eksiksiz Giriniz")
 
+      this.jobGroupService.jobsWeek.push(this.jobWeekForm.value)
     }
+
 
 
   }

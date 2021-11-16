@@ -1,10 +1,9 @@
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-">
        <p class="text-center">{{title}}</p>
-  <form class="from-group bg-light" [formGroup]="jobDayForm" (ngSubmit)="saveJob()">
-    <p class="text-center">{{title}}</p>
+  <form class="form-group bg-light" [formGroup]="jobDayForm" (ngSubmit)="saveJob()">
   <input class="form-control" type="text" placeholder="Görev Adı" formControlName="name">
   <br> <br>
   <input class="form-control" type="text" placeholder="Görev Açıklaması" formControlName="description">

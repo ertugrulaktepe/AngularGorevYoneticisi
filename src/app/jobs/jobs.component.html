@@ -1,42 +1,54 @@
-<div class="container">
+
+<div class="container mt-4" >
+  
   <div class="row">
     <div class="col-lg-4">
+      <h4 class="text-white" >Günlük Görev Listesi</h4>
       <div class="day-job">
-  <div class="container" *ngFor="let job of this.jobGroupService.jobsDay">
+  <div *ngFor="let job of this.jobGroupService.jobsDay">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{job.name}}</h5>
+    <p class="card-title text-dark">{{job.name.toUpperCase()}}</p>
     <p class="card-text text-dark">{{job.description}}</p>
-   <span class="text-dark">{{job.date}}</span>
-   <button class="btn btn-danger">Görevi Sil</button>
+  <div class="date">
+       <span class="text-dark">{{job.date}}</span>
+   <button class="btn btn-danger" (click)="deleteJobDay(job)">Görevi Sil</button>
+    </div>
   </div>
 </div>
   </div>
 </div>
     </div>
     <div class="col-lg-4">
-      <div class="day-job">
-  <div class="container" *ngFor="let job of this.jobGroupService.jobsWeek">
+       <h4 class="text-white">Haftalık Görev Listesi</h4>
+      <div class="week-job">
+  <div *ngFor="let job of this.jobGroupService.jobsWeek">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{job.name}}</h5>
+    <h5 class="card-title">{{job.name.toUpperCase()}}</h5>
     <p class="card-text text-dark">{{job.description}}</p>
-   <span class="text-dark">{{job.date}}</span>
-   <button class="btn btn-danger">Görevi Sil</button>
+    <div class="date">
+       <span class="text-dark">{{job.date}}</span>
+   <button class="btn btn-danger" (click)="deleteJobWeek(job)">Görevi Sil</button>
+    </div>
+  
   </div>
 </div>
   </div>
 </div>
     </div>
     <div class="col-lg-4">
-      <div class="day-job">
-  <div class="container" *ngFor="let job of this.jobGroupService.jobsMoon">
+      <div class="moon-job">
+         <h4 class="text-white">Aylık Görev Listesi</h4>
+  <div *ngFor="let job of this.jobGroupService.jobsMoon">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{job.name}}</h5>
+    <h5 class="card-title">{{job.name.toUpperCase()}}</h5>
     <p class="card-text text-dark">{{job.description}}</p>
-   <span class="text-dark">{{job.date}}</span>
-   <button class="btn btn-danger">Görevi Sil</button>
+ <div class="date">
+       <span class="text-dark">{{job.date}}</span>
+   <button class="btn btn-danger" (click)="deleteJobMoon(job)">Görevi Sil</button>
+    </div>
   </div>
 </div>
   </div>
@@ -46,13 +58,3 @@
 </div>
 
 
-<!-- <div class="container"  *ngFor="let job of this.jobGroupService.jobsMoon">
-    <span>Aylık</span>
-  <p>{{job.name}}</p>
-  <p>{{job.description}}</p>
-</div> -->
-<!-- <div class="container"  *ngFor="let job of this.jobGroupService.jobsWeek">
-    <span>haftalık</span>
-  <p>{{job.name}}</p>
-  <p>{{job.description}}</p>
-</div> -->
